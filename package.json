@@ -1,0 +1,25 @@
+{
+  "name": "team_profile_generator",
+  "version": "1.0.0",
+  "description": "Team Profile Generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeenaSmith/team_profile_generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeenaSmith/team_profile_generator/issues"
+  },
+  "homepage": "https://github.com/DeenaSmith/team_profile_generator#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
