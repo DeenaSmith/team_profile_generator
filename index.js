@@ -11,6 +11,7 @@ const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
 
 const newStaffInfo = [];
+const generateSite = require("./src/generate-site");
 
 
 // Questions for  initial prompt
@@ -147,26 +148,16 @@ const internQuestions = () => {
 
 
 
+// Takes user input and builds team to file
+function buildTeam () {
+    console.log("Your team profile is complete! Check out the newly generated HTML for the results.")
+
+    fs.writeFileSync("./dist/team.html", generateSite(newStaffInfo), "utf-8");
+};
+
+
+
 managerQuestions();
 
 
 
-
-// Takes user input and builds team to file
-function buildTeam () {
-    console.log("New Entry", newStaffInfo)
-}
-
-
-
-
-const writeFile = data => {
-    fs.writeFile('./dist/team.html', data, err => {
-        if (err) {
-            console.log(err);
-            return;
-        } else {
-            console.log("The team profile has been created! Check out the newly generated HTML.")
-        }
-    })
-}; 
