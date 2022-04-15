@@ -21,5 +21,8 @@
   "homepage": "https://github.com/DeenaSmith/team_profile_generator#readme",
   "devDependencies": {
     "jest": "^27.5.1"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.2"
   }
 }
