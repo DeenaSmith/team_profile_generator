@@ -59,10 +59,10 @@ const promptMenu = () => {
     ])
         .then(userChoice => {
             switch (userChoice.menu) {
-                case "add engineer":
+                case "Add engineer":
                     engineerQuestions();
                     break;
-                case "add intern":
+                case "Add intern":
                     internQuestions();
                     break;
                 default:
@@ -144,12 +144,29 @@ const internQuestions = () => {
 
 
 
-// Takes user input and builds team to file
-// const buildTeam = () => 
-
-
-
 
 
 
 managerQuestions();
+
+
+
+
+// Takes user input and builds team to file
+function buildTeam () {
+    console.log("New Entry", newStaffInfo)
+}
+
+
+
+
+const writeFile = data => {
+    fs.writeFile('./dist/team.html', data, err => {
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            console.log("The team profile has been created! Check out the newly generated HTML.")
+        }
+    })
+}; 
