@@ -35,11 +35,11 @@ const managerQuestions = () => {
         {
             type: "input",
             message: "What is your office number?",
-            name: "number"
+            name: "office"
         }
     ]).then(answers => {
         console.log(answers);
-        const manager = new Manager(answers.name, answers.id, answers.email, answers.number);
+        const manager = new Manager(answers.name, answers.id, answers.email, answers.office);
         newStaffInfo.push(manager);
 
         promptMenu()
